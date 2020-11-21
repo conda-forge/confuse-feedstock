@@ -5,9 +5,13 @@ Home: https://github.com/beetbox/confuse
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/confuse-feedstock/blob/master/LICENSE.txt)
 
 Summary: painless YAML configuration
+
+Development: https://github.com/beetbox/confuse
+
+Documentation: http://confuse.readthedocs.org/
 
 Confuse is a configuration library for Python that uses YAML.
 It takes care of defaults, overrides, type checking, command-line
