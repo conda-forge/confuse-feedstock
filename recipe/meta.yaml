@@ -1,5 +1,5 @@
 {% set name = "confuse" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 92fbca1c70611120ea722372e0c071c0d342a75f796b4bde4bf0348ea49f022e
+  sha256: d60104c0b2a708041ac27487fa6ee69bd37d910549659c7ba92f52cbe2ced4dc
 
 build:
   noarch: python
