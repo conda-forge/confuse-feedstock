@@ -1,11 +1,11 @@
-About confuse
-=============
+About confuse-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/confuse-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/beetbox/confuse
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/confuse-feedstock/blob/main/LICENSE.txt)
 
 Summary: painless YAML configuration
 
