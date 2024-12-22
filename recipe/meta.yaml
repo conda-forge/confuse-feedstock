@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7379a2ad49aaa862b79600cc070260c1b7974d349f4fa5e01f9afa6c4dd0611f
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - flit-core >=2,<4
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pyyaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - confuse
 
