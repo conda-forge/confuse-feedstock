@@ -19,6 +19,8 @@ requirements:
     - python {{ python_min }}
     - pip
     - flit-core >=2,<4
+    - poetry-core >=2.1
+    - poethepoet >=0.32
   run:
     - python >={{ python_min }}
     - pyyaml
