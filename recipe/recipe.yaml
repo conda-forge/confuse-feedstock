@@ -1,49 +1,49 @@
-{% set name = "confuse" %}
-{% set version = "2.1.0" %}
+schema_version: 1
+
+context:
+  name: confuse
+  version: 2.1.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: abb9674a99c7a6efaef84e2fc84403ecd2dd304503073ff76ea18ed4176e218d
 
 build:
+  number: 1
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - flit-core >=2,<4
     - poetry-core >=2.1
     - poethepoet >=0.32
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - pyyaml
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - confuse
-
+tests:
+  - python:
+      imports:
+        - confuse
+      python_version: ${{ python_min }}.*
 about:
-  home: https://github.com/beetbox/confuse
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: painless YAML configuration
-
   description: |
     Confuse is a configuration library for Python that uses YAML.
     It takes care of defaults, overrides, type checking, command-line
     integration, human-readable errors, and standard OS-specific locations.
-  doc_url: http://confuse.readthedocs.org/
-  dev_url: https://github.com/beetbox/confuse
+  homepage: https://github.com/beetbox/confuse
+  repository: https://github.com/beetbox/confuse
+  documentation: http://confuse.readthedocs.org/
 
 extra:
   recipe-maintainers:
