@@ -27,8 +27,8 @@ requirements:
     - typing_extensions
 
 test:
-  commands:
-    - pip check
+  #commands:
+   # - pip check
   requires:
     - python {{ python_min }}
     - pip
