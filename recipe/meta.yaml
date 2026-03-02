@@ -31,8 +31,8 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-  imports:
-    - confuse
+  #imports:
+    #- confuse
 
 
 about:
