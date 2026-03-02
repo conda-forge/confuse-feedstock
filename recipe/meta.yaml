@@ -24,6 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyyaml
+    - typing_extensions
 
 test:
   commands:
@@ -31,8 +32,8 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-  #imports:
-    #- confuse
+  imports:
+    - confuse
 
 
 about:
