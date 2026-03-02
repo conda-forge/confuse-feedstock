@@ -26,13 +26,14 @@ requirements:
     - pyyaml
 
 test:
+  commands:
+    - pip check
   requires:
     - python {{ python_min }}
     - pip
   imports:
     - confuse
-  commands:
-    - pip check
+
 
 about:
   home: https://github.com/beetbox/confuse
