@@ -1,5 +1,5 @@
 {% set name = "confuse" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: abb9674a99c7a6efaef84e2fc84403ecd2dd304503073ff76ea18ed4176e218d
+  sha256: 35c1b53e81be125f441bee535130559c935917b26aeaa61289010cd1f55c2b9e
 
 build:
   noarch: python
@@ -24,12 +24,17 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyyaml
+    - typing_extensions
 
 test:
+  commands:
+    - pip check
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - confuse
+
 
 about:
   home: https://github.com/beetbox/confuse
