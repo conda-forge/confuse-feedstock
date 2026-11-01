@@ -1,5 +1,5 @@
 {% set name = "confuse" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 66123bd4b38dec9ae36dd9407a090fd764245fd717cbaa986a68e3a05056920e
+  sha256: b51cd33c36319cf8ab4bade81d16df3e7135af01ffa3f51a60e131b9d5156cd3
 
 build:
   noarch: python
